@@ -6,7 +6,6 @@ public class Main {
         Toko toko = new Toko();
         int pilih;
         do {
-
             System.out.println("\n=== SISTEM TOKO HOTWHEELS ===");
             System.out.println("1. Tambah Data HotWheels");
             System.out.println("2. Tampilkan Data HotWheels");
