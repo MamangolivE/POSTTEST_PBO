@@ -7,6 +7,7 @@ Program ini merupakan aplikasi sederhana berbasis Java yang digunakan untuk meng
 Program memiliki fitur CRUD (Create, Read, Update, Delete) menggunakan struktur data ArrayList.
 ### Menu Utama
 ![Tampilan Menu Utama](assets/menuUtama.png)
+
 Menu utama merupakan tampilan awal program yang berisi daftar pilihan fitur 
 yang tersedia dalam sistem manajemen Toko HotWheels.
 ### Tambah Data HotWheels
