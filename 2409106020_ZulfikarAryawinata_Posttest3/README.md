@@ -5,12 +5,18 @@ Program ini merupakan aplikasi sederhana berbasis Java yang digunakan untuk meng
 
 ## Fitur Program
 Program memiliki fitur CRUD (Create, Read, Update, Delete) menggunakan struktur data ArrayList.
-
-1. Tambah data mobil HotWheels
-2. Menampilkan seluruh data mobil
-3. Mengubah data mobil
-4. Menghapus data mobil
-5. Keluar dari program
+### Menu Utama
+![Tampilan Menu Utama](assets/menuUtama.png)
+### Tambah data mobil HotWheels
+![Tambah HotWheels](assets/tambahMobil.png)
+### Menampilkan seluruh data mobil
+![Tampilkan Daftar HotWheels](assets/tampilkanData.png)
+### Mengubah data mobil
+![Ubah Data HotWheels](assets/ubahData.png)
+### Menghapus data mobil
+![Hapus Data HotWheels](assets/hapusData.png)
+### Keluar dari program
+   ![Keluar Program](assets/keluarProgram.png)
 
 ## Konsep PBO yang Digunakan
 - Class
@@ -22,6 +28,7 @@ Program memiliki fitur CRUD (Create, Read, Update, Delete) menggunakan struktur 
 ## Struktur Program
 - HotWheels.java → Class untuk menyimpan data mobil
 - Main.java → Program utama untuk menjalankan menu CRUD
+- Toko → Class untuk menyimpan fungsi dari fitur program
 
 ## Cara Menjalankan Program
 1. Compile file Java
