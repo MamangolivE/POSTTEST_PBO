@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        char pilihDiskon;
+        int diskon = 0;
         Scanner input = new Scanner(System.in);
         Toko toko = new Toko();
         int pilih;
@@ -40,7 +42,7 @@ public class Main {
 
                     int harga;
                     while (true) {
-                        System.out.print("Harga (15000 - 35000 untuk reguler,40000++ untuk premium): ");
+                        System.out.print("Harga (15000 - 35000 untuk reguler, 40000++ untuk premium): ");
                         harga = input.nextInt();
                         if (tipe == 1 && (harga >= 15000 && harga <= 35000)) {
                             break;
@@ -62,6 +64,28 @@ public class Main {
                         mobil = new HotWheelsPremium(nama, seri, harga, stok);
                     }
                     toko.tambahMobil(mobil);
+
+                    System.out.print("Apakah ada diskon? (y/n): ");
+                    pilihDiskon = input.next().charAt(0);
+
+                    if (pilihDiskon == 'y' || pilihDiskon == 'Y') {
+                        while (true) {
+                            System.out.print("Masukkan diskon (%): ");
+                            diskon = input.nextInt();
+
+                            if (diskon < 0 || diskon > 100) {
+                                System.out.println("Diskon tidak valid!");
+                            }
+                            else {
+                                break;
+                            }
+                        }
+
+                        mobil.setHarga(harga, diskon);// set harga dengan diskon
+                    }
+                    else {
+                        mobil.setHarga(harga);// set harga biasa
+                    }
 
                     System.out.println("\nData Berhasil Ditambahkan!");
                     break;
@@ -106,9 +130,29 @@ public class Main {
                         System.out.print("Stok Baru: ");
                         int stokBaru = input.nextInt();
                         input.nextLine();
-
-                        mobilUpdate.setHarga(hargaBaru);
                         mobilUpdate.setStok(stokBaru);
+
+                        System.out.print("Pakai diskon? (y/n): ");
+                        pilihDiskon = input.next().charAt(0);
+
+                        if (pilihDiskon == 'y' || pilihDiskon == 'Y') {
+                            while (true) {
+                                System.out.print("Diskon (%): ");
+                                diskon = input.nextInt();
+
+                                if (diskon < 0 || diskon > 100) {
+                                    System.out.println("Diskon tidak valid!");
+                                }
+                                else {
+                                    break;
+                                }
+                            }
+
+                            mobilUpdate.setHarga(hargaBaru, diskon);
+                        }
+                        else {
+                            mobilUpdate.setHarga(hargaBaru);
+                        }
 
                         System.out.println("\nData berhasil diupdate!");
 
